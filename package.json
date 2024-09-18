@@ -6,14 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "biome check"
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.1",
     "antd": "^5.20.6",
     "next": "14.2.11",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.1",

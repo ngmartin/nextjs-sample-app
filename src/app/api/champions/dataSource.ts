@@ -1,24 +1,7 @@
+import type { Champion } from "@/types";
+
 const CHAMPIONS_API =
   "https://ddragon.leagueoflegends.com/cdn/13.17.1/data/en_US/champion.json";
-
-type Champion = {
-  id: string;
-  key: string;
-  name: string;
-  title: string;
-  blurb: string;
-  partype: string;
-  info: {
-    attack: number;
-    defense: number;
-    magic: number;
-    difficulty: number;
-  };
-  image: {
-    full: string;
-  };
-  tags: string[];
-};
 
 type ChampionsResponse = {
   data: Record<string, Champion>;

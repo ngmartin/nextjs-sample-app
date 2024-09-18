@@ -16,17 +16,22 @@ export async function GET(request: NextRequest) {
   const cursor = searchParams.get("cursor");
   const name = searchParams.get("name");
   const partype = searchParams.get("partype");
+  const tag = searchParams.get("tag");
 
   if (cursor) {
     const index = champions.findIndex((champion) => champion.id === cursor);
-    champions = index < 0 ? [] : champions.slice(index + 1);
+    champions = index < 0 ? [] : champions.slice(index);
   }
 
   champions = champions.filter(
     (champion) =>
       (!name || champion.name.toLowerCase().includes(name.toLowerCase())) &&
-      (!partype || champion.partype === partype),
+      (!partype || champion.partype === partype) &&
+      (!tag || champion.tags.includes(tag)),
   );
 
-  return Response.json({ data: champions.slice(0, limit) });
+  return Response.json({
+    data: champions.slice(0, limit),
+    nextCursor: champions[limit]?.id,
+  });
 }
