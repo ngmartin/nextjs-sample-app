@@ -1,5 +1,7 @@
 This is a sample app using Next.js with the App Router feature.
 
+<img width="1440" alt="Screenshot 2024-09-20 at 01 21 10" src="https://github.com/user-attachments/assets/bbfd4ed8-2332-4fe5-af9c-48080d9ea585">
+
 ## Getting Started
 
 First, run the development server:
