@@ -1,10 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
-import { Layout, Button, Flex, Divider } from "antd";
 import { useChampions } from "@/services";
+import { Button, Divider, Flex, Layout } from "antd";
+import { useEffect, useState } from "react";
 import ChampionList from "./_components/ChampionList";
-import QuickSearch from "./_components/QuickSearch";
 import Filter from "./_components/Filter";
+import QuickSearch from "./_components/QuickSearch";
 
 const REFRESH_INTERVAL = 1000 * 60; // 60s
 

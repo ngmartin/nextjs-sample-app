@@ -1,6 +1,6 @@
-import debounce from "lodash.debounce";
-import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
+import { Input } from "antd";
+import debounce from "lodash.debounce";
 
 type Props = {
   onChange?: (value: string) => void;

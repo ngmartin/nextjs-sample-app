@@ -1,4 +1,4 @@
-import { Row as ARow, Col as ACol, Typography } from "antd";
+import { Col as ACol, Row as ARow, Typography } from "antd";
 import ChampionCard, { type Champion } from "./ChampionCard";
 
 type Props = {
@@ -6,7 +6,7 @@ type Props = {
   champions: Champion[];
 };
 
-const SKELETON_AMOUNT = 4;
+const SKELETON_AMOUNT = 6;
 
 const Row = ({ children }: React.PropsWithChildren) => (
   <ARow gutter={[16, 16]}>{children}</ARow>

@@ -1,4 +1,4 @@
-import { Card, Tag, Flex, Skeleton } from "antd";
+import { Card, Flex, Skeleton, Tag } from "antd";
 
 export type Champion = {
   image: string;
