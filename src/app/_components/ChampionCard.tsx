@@ -1,4 +1,4 @@
-import { Card, Tag, Flex } from "antd";
+import { Card, Tag, Flex, Skeleton } from "antd";
 
 export type Champion = {
   image: string;
@@ -39,5 +39,7 @@ function ChampionCard({ image, name, title, partype, tags }: Champion) {
     </Card>
   );
 }
+
+ChampionCard.Loading = () => <Skeleton.Input block className="!h-[450px]" />;
 
 export default ChampionCard;

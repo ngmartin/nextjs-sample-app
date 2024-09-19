@@ -31,13 +31,24 @@ const getKey = (
 };
 
 export function useChampions(params?: GetChampionsRequest) {
-  const { data, size, setSize, isValidating } =
+  const { data, size, setSize, isValidating, isLoading, mutate } =
     useSWRInfinite<GetChampionsResponse>(
       (_, previousPageData) => getKey(previousPageData, params),
       fetcher,
+      { revalidateFirstPage: false },
     );
   const items = data ? data.flatMap((page) => page.data) : [];
+  const isReachingEnd = data ? !data[data.length - 1].nextCursor : false;
+  const isLoadingInitialData = isLoading;
+  const isLoadingMore = !isLoadingInitialData && isValidating;
   const loadMore = () => setSize(size + 1);
 
-  return { items, isLoading: isValidating, loadMore };
+  return {
+    items,
+    isLoadingInitialData,
+    isLoadingMore,
+    isReachingEnd,
+    loadMore,
+    mutate,
+  };
 }
