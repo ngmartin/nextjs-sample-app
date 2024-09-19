@@ -24,7 +24,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Backend
 
 Data source: [champion.json](https://ddragon.leagueoflegends.com/cdn/13.17.1/data/en_US/champion.json)
+
 API: [http://localhost:3000/api/champions](http://localhost:3000/api/champions)
+
 Caveats:
 
 - Input validation is needed.
