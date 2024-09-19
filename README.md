@@ -34,6 +34,7 @@ Caveats:
 - Input validation is needed.
 - Storing all the data in memory from the data source is not an ideal approach.
 - Error handling is required.
+- Unit tests.
 
 ## Frontend
 
@@ -42,3 +43,4 @@ Caveats:
 - Ant Design doesn't fully support server components.
 - The design is responsive but not optimized for mobile devices.
 - Error handling needs improvement.
+- Unit tests.
